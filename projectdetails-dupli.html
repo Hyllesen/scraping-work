@@ -1,0 +1,597 @@
+
+
+    <!-- headline text -->
+    <div class="font12 bold mb-2" style="width: 100%;">
+        
+
+
+
+
+                                              
+                   <span id="showmapLabel">
+                    <a href="javascript:showMapP( 12.47813915, 55.62302042)">
+                        Vis kort
+                    </a>
+                </span>
+                    
+
+                          <div id='mapObjektP' style='width: 100%; height: 300px;display: none;'></div>
+
+
+    <div style="padding-top: 20px;z-index:100">
+        <ol class="progtrckr"> <li class="progtrckr-done" title="PLANLÆGNING"></li> <li class="progtrckr-done" title="RÅDGIVNING"></li> <li class="progtrckr-done" title="INDBUDTE TEAMS"></li> <li class="progtrckr-done" title="PROJEKTERING"></li> <li class="progtrckr-done" title="LICITATION/UDBUD"></li> <li class="progtrckr-done" title="INDBUDTE ENTREPRENØRER"></li> <li class="progtrckr-done" title="LICITATION AFHOLDT"></li> <li class="progtrckr-done" title="BYGGEPLADS ETABLERET"></li> <li class="progtrckr-done" title="BYGGEARBEJDET AFSLUTTES"></li> <li class="progtrckr-todo" title="ANNULLEREDE PROJEKTER"></li> <li class="progtrckr-todo" title="INDKØB/RENGØRING"></li></ol>
+    </div>
+              
+    <div style="float: right; margin-right: 20px;" id="projectCardIconPanel">
+        
+    </div>
+
+   
+
+
+    <span class="ml-3">
+      Renovering af boliger
+    </span>
+
+    </div>
+    
+    <!-- headline border -->
+    <!--div style="border: none; border-bottom: 1px solid black; padding:0; margin: 0 0 10px 0; font-size: 1px;" /></div-->
+
+<style>
+    .card-body label {
+        color: grey;
+        border-bottom: 2px solid #ccc;
+    }
+
+    .role-project-grey > div > p {
+        color: grey;
+        margin: 0px;
+    }
+
+    .role-project-grey > div > span {
+        color: grey;
+    }
+
+    .role-project-grey {
+        margin-bottom: 10px;
+    }
+
+    .card-group > .card {
+        /*padding: 1em;*/
+    }
+      
+    
+    
+    @media (max-width: 1200px) {
+        .Lpadding {
+            padding-left: 0px;
+        }
+
+    }
+
+    @media (min-width: 1200px) {
+        .Lpadding {
+            padding-left: 15px;
+        }
+
+    }
+
+    .marker {
+        background-image: url("/images/map-marker.png");
+        background-size: cover;
+        width: 40px;
+        height: 40px;
+        /*border-radius: 50%;*/
+        cursor: pointer;
+    }
+
+    .mapboxgl-popup {
+        max-width: 300px;
+    }
+
+    .mapboxgl-popup-content {
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+    }
+
+</style>
+
+
+    <div id="project_content1" >
+        
+
+    <style>
+        .card-body label {
+            color: grey;
+            border-bottom: 2px solid #ccc;
+        }
+
+        .role-project-grey > div > p {
+            color: grey;
+            margin: 0px;
+        }
+
+        .role-project-grey > div > span {
+            color: grey;
+        }
+
+        .role-project-grey {
+            margin-bottom: 10px;
+        }
+
+        .Lpadding {
+            padding-left: 10px;
+        }
+
+    </style>
+
+
+           
+
+
+   
+
+    <div class="row" style="margin: 0;">
+        <div class="col-lg-4 col-xl-3 object-card-column">
+ 
+                <div class="object-card-separator"></div>
+                <div>
+                <table border="0" class="font8" cellpadding="1" cellspacing="0">
+
+                    
+                    <tr>
+                        <td style="width: 10px">&nbsp;</td>
+                        <td class="font9 object-card-label " valign="top" colspan="2">
+                            Projektnavn:&nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 10px">&nbsp;</td>
+                        <td class="normal" colspan="2">
+                            Friheden I Strandmarksvej, Hvidovrevej
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td colspan="3" style="height: 8px;"></td>
+                    </tr>
+                    <tr>
+                        <td style="width: 10px">&nbsp;</td>
+                        <td class="font9 object-card-label" valign="top" colspan="2">
+                            Byggeplads adresse:&nbsp;
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="width: 10px; vertical-align: top;">
+                            
+                        </td>
+                        <td class="normal" colspan="2">
+                            Hvidovre Enghavevej<br />
+                            Hvidovre<br />
+                            2650 HVIDOVRE
+
+
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td colspan="3" style="height: 8px;"></td>
+                    </tr>
+                    <tr>
+                        <td style="width: 10px">&nbsp;</td>
+                        <td class="object-card-label">
+                            Region:&nbsp;
+                        </td>
+                        <td class="normal">
+                            Hovedstaden
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 10px">
+                            
+
+                        </td>
+                        <td class="object-card-label">
+
+                            Kommune:&nbsp;
+                        </td>
+                        <td class="normal">
+                            Hvidovre
+
+                        </td>
+                    </tr>
+
+                    
+                    <tr>
+                        <td colspan="3" style="height: 8px;"></td>
+                    </tr>
+                    <tr>
+                  <td style="width: 10px"></td>
+                        <td class="object-card-label" valign="top" >
+                            Ejendommens navn:&nbsp;
+                        </td>
+                    
+                        <td class="normal">
+                            Strandmarksvej, Hvidovrevej
+                        </td>
+                    </tr>
+                    
+                </table>
+            </div>
+
+
+            <div class="object-card-separator"></div>
+                    <div>
+                <table border="0" class="font8" cellpadding="1" cellspacing="0">
+                    <tr>
+                        <td style="width: 10px">
+                        </td>
+                        <td class="object-card-label">
+                            Budget(Mil.):&nbsp;
+                        </td>
+                        <td class="normal">
+                            400 Mio.Kr
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 10px">
+                        </td>
+                        <td class="object-card-label">
+
+                            Byggestart:&nbsp;
+                        </td>
+                        <td class="normal">
+
+                            Juni 2015
+                    
+
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td style="width: 10px">&nbsp;</td>
+                        <td class="object-card-label">
+                            Byggeslut:&nbsp;
+                        </td>
+                        <td class="normal">
+                            April 2019
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td style="width: 10px">&nbsp;</td>
+                        <td class="object-card-label">
+                            Byggeperiode:&nbsp;
+                        </td>
+                        <td class="normal">
+                            47 Måneder
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td style="width: 10px">&nbsp;</td>
+                        <td class="object-card-label">
+                            Entrepriseform:&nbsp;
+                        </td>
+                        <td class="normal">
+                            Storentreprise
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td style="width: 10px">&nbsp;</td>
+                        <td class="object-card-label">
+                            Udbudsform:&nbsp;
+                        </td>
+                        <td class="normal">
+                            Prækvalifikation
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td style="width: 10px">
+                            
+                        </td>
+                        <td class="object-card-label">
+                            Projektstadie:&nbsp;
+                        </td>
+                        <td class="normal">
+                            Byggearbejdet afsluttes
+
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td style="width: 10px">
+                        </td>
+                        <td class="object-card-label">
+                            M2:&nbsp;
+                        </td>
+                        <td class="normal">
+                            70000
+
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td style="width: 10px">&nbsp;</td>
+                        <td class="object-card-label">
+                            Blokke:&nbsp;
+                        </td>
+                        <td class="normal">
+                            22
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td style="width: 10px">&nbsp;</td>
+                        <td class="object-card-label">
+                            Lejligheder:&nbsp;
+                        </td>
+                        <td class="normal">
+                            1154
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td style="width: 10px">&nbsp;</td>
+                        <td class="object-card-label">
+                            Etager:&nbsp;
+                        </td>
+                        <td class="normal">
+                            4
+                        </td>
+                    </tr>
+                    
+                </table>
+            </div>
+                    <div class="object-card-separator"></div>
+                    <div>
+                <table border="0" class="font8" cellpadding="1" cellspacing="0">
+                    <tr>
+                        <td style="width: 10px">&nbsp;</td>
+                        <td class="font10 object-card-label" colspan="2">
+                            Kategorier
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 10px">
+                        </td>
+                        <td class="normal" colspan="2">
+
+                            <table class="font8"  border="0" cellspacing="0" cellpadding="0"><tr><td class="normal" valign="top">Boligblokke/lejligheder - Indv.renovering </td></tr><tr><td class="normal" valign="top">Boligblokke/lejligheder - Udv.renovering </td></tr><tr><td class="normal" valign="top">Parkering - Anlægsarbejde </td></tr><tr><td class="normal" valign="top">Flise/brolægning - Anlægsarbejde </td></tr><tr><td class="normal" valign="top">Byrum/friareal/torv - Anlægsarbejde </td></tr></table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+                    <div class="object-card-separator"></div>
+                    <div>
+                <table border="0" class="font8" cellpadding="1" cellspacing="0">
+
+                    
+                    <tr>
+                        <td style="width: 10px"></td>
+                        <td colspan="2">
+                            <span class="font9 object-card-label blueText" title="BI har afsluttet overvågning af dette projekt">BI har afsluttet overvågning<br> af dette projekt</span>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td style="width: 10px">&nbsp;
+                        </td>
+                        <td colspan="2">
+                            <span class="font9 object-card-label greenText" title="Bæredygtigt byggeri">Bæredygtigt byggeri</span>
+                        </td>
+                    </tr>
+
+                    
+                    <tr>
+                        <td colspan="3" style="height: 8px;"></td>
+                    </tr>
+                    
+
+                    <tr>
+                        <td style="width: 10px">&nbsp;</td>
+                        <td class="object-card-label">
+                            Projekt ID:&nbsp;
+                        </td>
+                        <td class="normal">
+                            112480114
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 10px">&nbsp;</td>
+                        <td class="object-card-label">
+                            Oprettet:&nbsp;
+                        </td>
+                        <td class="normal">
+                            29-11-2012
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 10px">&nbsp;</td>
+                        <td class="object-card-label">
+                            Opdateret:&nbsp;
+                        </td>
+                        <td class="normal">
+                            05-02-2020
+                        </td>
+                    </tr>
+                </table>
+            </div>
+                    <div class="object-card-separator"></div>
+                    <div>
+                <table border="0" class="font8" cellpadding="1" cellspacing="0">
+                    <tr>
+                        <td style="width: 10px">&nbsp;</td>
+                        <td class="font10 object-card-label" colspan="2">
+                            Ansvarlig undersøger
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 10px">&nbsp;</td>
+                        <td class="normal" colspan="2">
+                            Niels Højmark
+                            <br />
+                            <a class="petrolText" href="mailto:nxh@byggefakta.dk?subject=Project id: 112480114">
+                                nxh@byggefakta.dk</a><br />
+                            Telefon: 33279557
+                        </td>
+                    </tr>
+                    <tr>
+
+                        <td style="width: 10px">&nbsp;</td>
+                        <td valign="top" colspan="2">
+                            <a class="medium"
+                                href="javascript:LoadFeedbackPanelForm('project')">
+                                Ændringer/ tillæg</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+
+        <div class="col-lg-4 col-xl-6">
+            <div class="row">
+
+                <div class="col-lg-12 col-xl-6 object-card-column">
+                    <div>
+                        <div class="object-card-separator"></div>
+                        <div>
+                            <table border="0" class="font8" cellpadding="1" cellspacing="0">
+                                <tr>
+                                    <td style="width: 10px; vertical-align: top;">
+                                        <img src="images/2013/updated_project_10x10.png" alt="Opdaterede " title="Opdaterede " />
+                                    </td>
+                                    <td class="font10 object-card-label" colspan="2">
+                                        Projekt notater
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 10px">&nbsp;</td>
+                                    <td class="normal" colspan="2">
+                                        <BR /> <br>5/2-2020 Sagen er opdateret med materialer.   Boligselskabet Friheden og KAB renoverer afdeling I Friheden.  Projektet omfatter renovering af tage og facader, samt indvendige ombygnings- og installationsarbejder i 22 eksisterende boligblokke. En boligblok ombygges til 14 tilgængelighedsboliger i stueplan. I 4 boligblokke udføres i en enkelt opgang i hver blok sammenlagte lejligheder. Betonskader på facader renoveres inden opsætning af isolerede træelementer og fiberbetonelementer. Vinduer og vinduespartier skiftes generelt, idet vinduerne rykkes ud i forhold til ny facade. Udskiftningen hindrer endvidere kuldebroer i den nye konstruktion i forbindelse med facadeistandsættelsen. De små karnapper nedrives, og der etableres franske altaner som sikrer bedre dagslysindfald i lejlighederne. I stueetagen kan etableres altandøre og trapper til haven i enkelte boliger. De inddækkede altaner bevares. Opgangsdøre udskiftes og der etableres elektronisk adgangskontrol med brik-løsning ved alle indgangsdøre, kælderdøre og til storskraldsrum. Der etableres ny tagkonstruktion med fald mod facader og nye tagrender/tagnedløbsbrønde på alle blokke så vandet bortledes fra bygninger. Eksisterende tagbelægninger (tagpap m.m.) fjernes og ny tagkonstruktion etableres som pulttag med ensidigt fald. Varmeledninger udskiftes til nye højtisolerede og tidssvarende fjernvarmeledninger. I forbindelse med udskiftningen ombygges beholderrum til egentlige fjernvarmecentraler med vekslere for fjernvarmevand. Hovedvarmecentral bibeholdes som spids- og reservelastcentral, som styres af Fjernvarmedistributionsselskabet Hvidovre. Afløbsinstallationen fra fodbøjning i kælder til udluftning over tag udskiftes. Brugsvandsinstallationen udskiftet komplet til ny installation, inkl. Isolering. Energibesparende vandinstallationer indtænkes. Der etableres mekanisk ventilation med varmegenvinding i hele lejligheden, dvs. udsugning fra køkken via emhætter og fra bad, samt opvarmet indblæsning i stue og værelser. Ejendommens el-installationer udskiftes til tidssvarende standard. Der foretages sammenlægning af boliger i fire opgange, som så bliver til nye 5-rumsboliger. På havesiden etableres hævet adgangsareal med rampe og mulighed for ophold på et hævet terrasseareal for alle boliger. Der indrettes således 14 tilgængelige boliger for kørestolsbrugere med adgang fra havesiden. Lejligheder vil være beboede i ombygningsperioden.  Henrik Larsen A/S varetager rådgivningen i samarbejde med Friborg & Lassen A/S og Jpe Rådgivning A/S. Byggearbejdet udføres som storentrepriser (bygning og installation). <br>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                            
+                    </div>
+                </div>
+
+                <div class="col-lg-12 col-xl-6  object-card-column">
+                    <div>
+                        <div class="object-card-separator"></div><div class="Lpadding"><span class="font10 object-card-label">Roller (Målgrupper)</span><br /><br /> <span class="font9 object-card-label">Bygherre:</span><br /><br><i>Tilføjet:</i>&nbsp;01-02-2014<br /><div onclick="javascript:LoadCompany(869654)" style="cursor:pointer;"><span class="petrolText underlinetext font9 bold">Boligselskabet Friheden </span><br />Vester Voldgade 17<br />1552&nbsp;KØBENHAVN V<br />Telefon: 36786148<br /><br /></div><br /> <span class="font9 object-card-label">Bygherreadministrator:</span><br /><br><i>Tilføjet:</i>&nbsp;09-08-2017<br /><div onclick="javascript:LoadCompany(901335)" style="cursor:pointer;"><span class="petrolText underlinetext font9 bold">Kab S M B A </span><br />Vester Voldgade 17<br />1552&nbsp;KØBENHAVN V<br />Telefon: 33631000<br />Fax: 33631012<br /><br /></div><br /> <span class="font9 object-card-label">Bygherrerådgiver:</span><br /><br><i>Tilføjet:</i>&nbsp;17-12-2012<br /><div onclick="javascript:LoadCompany(250363)" style="cursor:pointer;"><span class="petrolText underlinetext font9 bold">Arkitektfirmaet Friborg & Lassen A/S </span><br />Vesterbrogade 124B<br />1620&nbsp;KØBENHAVN V<br />Telefon: 33254400<br />Fax: 33254405<br /><br /></div><br /> <span class="font9 object-card-label">Bygherrerådgiver:</span><br /><br><i>Tilføjet:</i>&nbsp;24-04-2018<br /><div onclick="javascript:LoadCompany(6003190)" style="cursor:pointer;"><span class="petrolText underlinetext font9 bold">Orbicon A/S </span><br />Søndre Jernbanevej 4C 1<br />3400&nbsp;Hillerød<br />Telefon: 40317350<br />Fax: 38114205<br /><br /></div><i>Kontakt:</i>&nbsp;<a href="javascript:LoadContact(914173)"><span class="petrolText bold "><u>Bjarne&nbsp;Hansen</u></span></a><br /><a class="petrolText font8" style="line-height: 12pt; "  href="mailto:bh@henrik-larsen.dk?subject=Angående : Renovering af boliger ,Friheden I Strandmarksvej, Hvidovrevej" >bh@henrik-larsen.dk</a><br /><br /> <span class="font9 object-card-label">Involveret i projektet:</span><br /><br><i>Tilføjet:</i>&nbsp;12-09-2013<br /><div onclick="javascript:LoadCompany(901335)" style="cursor:pointer;"><span class="petrolText underlinetext font9 bold">Kab S M B A </span><br />Vester Voldgade 17<br />1552&nbsp;KØBENHAVN V<br />Telefon: 33631000<br />Fax: 33631012<br /><br /></div><br /> <span class="font9 object-card-label">Totalrådgiver:</span><br /><br><i>Tilføjet:</i>&nbsp;24-04-2018<br /><div onclick="javascript:LoadCompany(6003190)" style="cursor:pointer;"><span class="petrolText underlinetext font9 bold">Orbicon A/S </span><br />Søndre Jernbanevej 4C 1<br />3400&nbsp;Hillerød<br />Telefon: 40317350<br />Fax: 38114205<br /><br /></div><i>Kontakt:</i>&nbsp;<a href="javascript:LoadContact(914173)"><span class="petrolText bold "><u>Bjarne&nbsp;Hansen</u></span></a><br /><a class="petrolText font8" style="line-height: 12pt; "  href="mailto:bh@henrik-larsen.dk?subject=Angående : Renovering af boliger ,Friheden I Strandmarksvej, Hvidovrevej" >bh@henrik-larsen.dk</a><br /><br /> <span class="font9 object-card-label">Skitseprojekt:</span><br /><br><i>Tilføjet:</i>&nbsp;01-02-2014<br /><div onclick="javascript:LoadCompany(250363)" style="cursor:pointer;"><span class="petrolText underlinetext font9 bold">Arkitektfirmaet Friborg & Lassen A/S </span><br />Vesterbrogade 124B<br />1620&nbsp;KØBENHAVN V<br />Telefon: 33254400<br />Fax: 33254405<br /><br /></div><br /> <span class="font9 object-card-label">Skitseprojekt:</span><br /><br><i>Tilføjet:</i>&nbsp;01-02-2014<br /><div onclick="javascript:LoadCompany(823553)" style="cursor:pointer;"><span class="petrolText underlinetext font9 bold">Jpe Rådgivning ApS </span><br />Amalievej 19 St tv<br />1875&nbsp;Frederiksberg C<br />Telefon: 40180768<br /><br /></div><br /> <span class="font9 object-card-label">Skitseprojekt:</span><br /><br><i>Tilføjet:</i>&nbsp;24-04-2018<br /><div onclick="javascript:LoadCompany(6003190)" style="cursor:pointer;"><span class="petrolText underlinetext font9 bold">Orbicon A/S </span><br />Søndre Jernbanevej 4C 1<br />3400&nbsp;Hillerød<br />Telefon: 40317350<br />Fax: 38114205<br /><br /></div><br /> <span class="font9 object-card-label">Arkitekt:</span><br /><br><i>Tilføjet:</i>&nbsp;12-09-2013<br /><div onclick="javascript:LoadCompany(250363)" style="cursor:pointer;"><span class="petrolText underlinetext font9 bold">Arkitektfirmaet Friborg & Lassen A/S </span><br />Vesterbrogade 124B<br />1620&nbsp;KØBENHAVN V<br />Telefon: 33254400<br />Fax: 33254405<br /><br /></div><i>Kontakt:</i>&nbsp;<a href="javascript:LoadContact(1265890)"><span class="petrolText bold "><u>Kirsten&nbsp;Berg</u></span></a><br /><a class="petrolText font8" style="line-height: 12pt; "  href="mailto:kb@friborg-lassen.dk?subject=Angående : Renovering af boliger ,Friheden I Strandmarksvej, Hvidovrevej" >kb@friborg-lassen.dk</a><br /><br /> <span class="font9 object-card-label">Landskabsarkitekt:</span><br /><br><i>Tilføjet:</i>&nbsp;29-11-2017<br /><div onclick="javascript:LoadCompany(963136)" style="cursor:pointer;"><span class="petrolText underlinetext font9 bold">Liw ApS </span><br />Hvide Hus Vej 3 3 dør 401<br />8400&nbsp;Ebeltoft<br />Telefon: 28106460<br /><br /></div><br /> <span class="font9 object-card-label">Ingeniør:</span><br /><br><i>Tilføjet:</i>&nbsp;08-05-2013<br /><div onclick="javascript:LoadCompany(823553)" style="cursor:pointer;"><span class="petrolText underlinetext font9 bold">Jpe Rådgivning ApS </span><br />Amalievej 19 St tv<br />1875&nbsp;Frederiksberg C<br />Telefon: 40180768<br /><br /></div><br /> <span class="font9 object-card-label">Ingeniør:</span><br /><br><i>Tilføjet:</i>&nbsp;24-04-2018<br /><div onclick="javascript:LoadCompany(6003190)" style="cursor:pointer;"><span class="petrolText underlinetext font9 bold">Orbicon A/S </span><br />Søndre Jernbanevej 4C 1<br />3400&nbsp;Hillerød<br />Telefon: 40317350<br />Fax: 38114205<br /><br /></div><i>Kontakt:</i>&nbsp;<a href="javascript:LoadContact(914173)"><span class="petrolText bold "><u>Bjarne&nbsp;Hansen</u></span></a><br /><a class="petrolText font8" style="line-height: 12pt; "  href="mailto:bh@henrik-larsen.dk?subject=Angående : Renovering af boliger ,Friheden I Strandmarksvej, Hvidovrevej" >bh@henrik-larsen.dk</a><br /><br /> <span class="font9 object-card-label">Stor Entreprise:</span><br /><br><i>Tilføjet:</i>&nbsp;16-02-2017<br /><div onclick="javascript:LoadCompany(316273)" style="cursor:pointer;"><span class="petrolText underlinetext font9 bold">Adserballe & Knudsen A/S </span><br />Ryttermarken 6<br />3520&nbsp;FARUM<br />Telefon: 44978733<br />Fax: 44680019<br /><br /></div><i>Kontakt:</i>&nbsp;<a href="javascript:LoadContact(1176622)"><span class="petrolText bold "><u>Niels Jul&nbsp;Jakobsen</u></span></a><br /><a class="petrolText font8" style="line-height: 12pt; "  href="mailto:njj@aogk.dk?subject=Angående : Renovering af boliger ,Friheden I Strandmarksvej, Hvidovrevej" >njj@aogk.dk</a><br /><i>Projektleder:</i>&nbsp;<a href="javascript:LoadContact(1310122)"><span class="petrolText bold "><u>Thomas&nbsp;Willumsen</u></span></a><br /><a class="petrolText font8" style="line-height: 12pt; "  href="mailto:thw@aogk.dk?subject=Angående : Renovering af boliger ,Friheden I Strandmarksvej, Hvidovrevej" >thw@aogk.dk</a><br /><br /> <span class="font9 object-card-label">Stor Entreprise:</span><br /><br><i>Tilføjet:</i>&nbsp;27-03-2015<br /><div onclick="javascript:LoadCompany(905226)" style="cursor:pointer;"><span class="petrolText underlinetext font9 bold">Finn L. & Davidsen A/S </span><br />Tagensvej 180<br />2200&nbsp;KØBENHAVN N<br />Telefon: 70122020<br />Fax: 70122021<br /><br /></div><i>Kontakt:</i>&nbsp;<a href="javascript:LoadContact(1269683)"><span class="petrolText bold "><u>Lasse&nbsp;Houengaard</u></span></a><br /><a class="petrolText font8" style="line-height: 12pt; "  href="mailto:lasse@fld.dk?subject=Angående : Renovering af boliger ,Friheden I Strandmarksvej, Hvidovrevej" >lasse@fld.dk</a><br /><br /> <span class="font9 object-card-label">Tømrer Entr.:</span><br /><br><i>Tilføjet:</i>&nbsp;28-08-2017<br /><div onclick="javascript:LoadCompany(880180)" style="cursor:pointer;"><span class="petrolText underlinetext font9 bold">Fischer Gruppen A/S </span><br />Literbuen 10<br />2740&nbsp;Skovlunde<br />Telefon: 25336599<br /><br /></div><i>Projektleder:</i>&nbsp;<a href="javascript:LoadContact(1232355)"><span class="petrolText bold "><u>Anders&nbsp;Fischer</u></span></a><br /><br /> <span class="font9 object-card-label">Vindue- & døre Entr.:</span><br /><br><i>Tilføjet:</i>&nbsp;27-03-2015<br /><div onclick="javascript:LoadCompany(316273)" style="cursor:pointer;"><span class="petrolText underlinetext font9 bold">Adserballe & Knudsen A/S </span><br />Ryttermarken 6<br />3520&nbsp;FARUM<br />Telefon: 44978733<br />Fax: 44680019<br /><br /></div><i>Kontakt:</i>&nbsp;<a href="javascript:LoadContact(1176622)"><span class="petrolText bold "><u>Niels Jul&nbsp;Jakobsen</u></span></a><br /><a class="petrolText font8" style="line-height: 12pt; "  href="mailto:njj@aogk.dk?subject=Angående : Renovering af boliger ,Friheden I Strandmarksvej, Hvidovrevej" >njj@aogk.dk</a><br /><br /> <span class="font9 object-card-label">Maler Entr.:</span><br /><br><i>Tilføjet:</i>&nbsp;28-08-2017<br /><div onclick="javascript:LoadCompany(590661)" style="cursor:pointer;"><span class="petrolText underlinetext font9 bold">Vinkler ApS, Tapetsér og Malermester </span><br />Fossgårdsvej 21<br />2720&nbsp;VANLØSE<br />Telefon: 38712225<br />Fax: 38712226<br /><br /></div><i>Projektleder:</i>&nbsp;<a href="javascript:LoadContact(674568)"><span class="petrolText bold "><u>Kristian&nbsp;Vinkler</u></span></a><br /><a class="petrolText font8" style="line-height: 12pt; "  href="mailto:vinkler@vinkleraps.dk?subject=Angående : Renovering af boliger ,Friheden I Strandmarksvej, Hvidovrevej" >vinkler@vinkleraps.dk</a><br /><br /> <span class="font9 object-card-label">Belægning Entr.:</span><br /><br><i>Tilføjet:</i>&nbsp;27-03-2015<br /><div onclick="javascript:LoadCompany(316273)" style="cursor:pointer;"><span class="petrolText underlinetext font9 bold">Adserballe & Knudsen A/S </span><br />Ryttermarken 6<br />3520&nbsp;FARUM<br />Telefon: 44978733<br />Fax: 44680019<br /><br /></div><i>Kontakt:</i>&nbsp;<a href="javascript:LoadContact(1176622)"><span class="petrolText bold "><u>Niels Jul&nbsp;Jakobsen</u></span></a><br /><a class="petrolText font8" style="line-height: 12pt; "  href="mailto:njj@aogk.dk?subject=Angående : Renovering af boliger ,Friheden I Strandmarksvej, Hvidovrevej" >njj@aogk.dk</a><br /><br /> <span class="font9 object-card-label">El-entreprenør:</span><br /><br><i>Tilføjet:</i>&nbsp;27-03-2015<br /><div onclick="javascript:LoadCompany(905226)" style="cursor:pointer;"><span class="petrolText underlinetext font9 bold">Finn L. & Davidsen A/S </span><br />Tagensvej 180<br />2200&nbsp;KØBENHAVN N<br />Telefon: 70122020<br />Fax: 70122021<br /><br /></div><i>Kontakt:</i>&nbsp;<a href="javascript:LoadContact(1269683)"><span class="petrolText bold "><u>Lasse&nbsp;Houengaard</u></span></a><br /><a class="petrolText font8" style="line-height: 12pt; "  href="mailto:lasse@fld.dk?subject=Angående : Renovering af boliger ,Friheden I Strandmarksvej, Hvidovrevej" >lasse@fld.dk</a><br /><br /> <span class="font9 object-card-label">Ventilation Entr.:</span><br /><br><i>Tilføjet:</i>&nbsp;27-03-2015<br /><div onclick="javascript:LoadCompany(905226)" style="cursor:pointer;"><span class="petrolText underlinetext font9 bold">Finn L. & Davidsen A/S </span><br />Tagensvej 180<br />2200&nbsp;KØBENHAVN N<br />Telefon: 70122020<br />Fax: 70122021<br /><br /></div><i>Kontakt:</i>&nbsp;<a href="javascript:LoadContact(1269683)"><span class="petrolText bold "><u>Lasse&nbsp;Houengaard</u></span></a><br /><a class="petrolText font8" style="line-height: 12pt; "  href="mailto:lasse@fld.dk?subject=Angående : Renovering af boliger ,Friheden I Strandmarksvej, Hvidovrevej" >lasse@fld.dk</a><br /><br /> <span class="font9 object-card-label">VVS Entr.:</span><br /><br><i>Tilføjet:</i>&nbsp;27-03-2015<br /><div onclick="javascript:LoadCompany(905226)" style="cursor:pointer;"><span class="petrolText underlinetext font9 bold">Finn L. & Davidsen A/S </span><br />Tagensvej 180<br />2200&nbsp;KØBENHAVN N<br />Telefon: 70122020<br />Fax: 70122021<br /><br /></div><i>Kontakt:</i>&nbsp;<a href="javascript:LoadContact(1269683)"><span class="petrolText bold "><u>Lasse&nbsp;Houengaard</u></span></a><br /><a class="petrolText font8" style="line-height: 12pt; "  href="mailto:lasse@fld.dk?subject=Angående : Renovering af boliger ,Friheden I Strandmarksvej, Hvidovrevej" >lasse@fld.dk</a><br /></div><div class="object-card-separator"></div><div class="Lpadding"><span class="font10 object-card-label">Materiale</span><br /><br /><div class="font9 object-card-label">Altaner</div><div style="margin-left:5px; margin-bottom: 3px;"><img src="images/2013/updated_project_10x10.png" alt="Opdaterede " title="Opdaterede " />Altan-Beton<br /><i></i></div><br /><div class="font9 object-card-label">Facader</div><div style="margin-left:5px; margin-bottom: 3px;">Facade-Fibercementplade<br /><i></i></div><div style="margin-left:5px; margin-bottom: 3px;">Facade-Aluminium<br /><i></i></div><br /><div class="font9 object-card-label">Vinduer</div><div style="margin-left:5px; margin-bottom: 3px;">Vinduer-Ovenlys<br /><i></i></div><br /><div class="font9 object-card-label">Gulv</div><div style="margin-left:5px; margin-bottom: 3px;"><img src="images/2013/updated_project_10x10.png" alt="Opdaterede " title="Opdaterede " />Gulv-Træ - parket<br /><i></i></div><div style="margin-left:5px; margin-bottom: 3px;">Gulv-Klinker natursten<br /><i></i></div><br /><div class="font9 object-card-label">Tagbelægning</div><div style="margin-left:5px; margin-bottom: 3px;">Tag-Pap<br /><i></i></div><div style="margin-left:5px; margin-bottom: 3px;">Tag-Grønne<br /><i></i></div><br /><div class="font9 object-card-label">Ventilation</div><div style="margin-left:5px; margin-bottom: 3px;">Ventilation-Anlæg<br /><i></i></div><div style="margin-left:5px; margin-bottom: 3px;">Ventilation-Genvindingsanlæg<br /><i></i></div><br /><div class="font9 object-card-label">Varmesystem</div><div style="margin-left:5px; margin-bottom: 3px;">Varmekilde-Fjernvarme<br /><i></i></div><br /><div class="font9 object-card-label">El o. tele</div><div style="margin-left:5px; margin-bottom: 3px;">Solceller<br /><i></i></div></div>
+                    </div>
+                
+
+
+            </div>
+
+        </div>
+               </div>
+
+        <div class="col-lg-4 col-xl-3 object-card-column">
+            <div>
+                <div class="Lpadding">
+                    
+                </div>
+
+                          
+
+                <div class="object-card-separator"></div>
+                <div class="Lpadding">
+                    
+                    <!-- salestatus panel -->
+                    <div style="margin-top: 10px; float: left;" class="font10" id="quickMenuOptionPanelModalButtonProjectSaleStatus" data-toggle="modal" data-target="#quickMenuOptionPanelModalProjectSaleStatus">
+
+                     <img src="images/2013/16/salesstatus.png" style="vertical-align: middle;" />&nbsp;&nbsp;<a title="Status" href="javascript:LoadToolBarProjectSaleStatusGuideMenu();" class="font10 object-card-label">Status</a>
+                    </div>
+
+                    <div style="position: relative; height: 7px; width: 100px; clear: both; font-size: 1px;"></div>
+
+                    <div id="ProjectSaleStatusPanel" class="font8">
+                        <br />
+                        <br />
+                        <br />
+                        <div class="centertext">
+                            <img src="../images/ajax-loader.gif" />
+                        </div>
+                    </div>
+                </div>
+     
+
+
+
+
+                
+                <!-- User notes panel for this object -->
+                <div class="object-card-separator"></div>
+                <div class="Lpadding">
+                      
+                    <div id="addUserNotePanelModalButton" style="margin-top: 10px; float: left;" class="font10" data-toggle="modal" data-target="#addUserNotePanelModal">
+                        <img src="../images/blank.gif" class="img16x16 imgNotepad16" style="vertical-align: middle;" />&nbsp;&nbsp;<a title="Indsæt en note" href="javascript:ShowUserNotePanel()" class="font10 object-card-label">Notater</a>
+                    </div>
+
+                    <div style="position: relative; height: 7px; width: 100px; clear: both; font-size: 1px;"></div>
+
+                    <div id="project_UserNotesPanel" class="font8">
+                        <br />
+                        <br />
+                        <br />
+                        <div class="centertext">
+                            <img src="../images/ajax-loader.gif" />
+                        </div>
+                    </div>
+                </div>
+
+                
+
+            
+              <div style="position: relative; height: 7px; width: 100px; clear: both; font-size: 1px;"></div>
+
+              </div>
+              </div>
+    
+
+              </div>
+
+              
+    </div>
+
+
+    <!-- Left column -->
+    <div id="project_leftColumn" style="float: left; width: 215px;">
+        
+              
+    </div>
+    
+    <div class="grayVerticalLine"></div>
+
+
+    <!-- Center column -->
+    <div id="project_centerColumn" class="font8" style="float: left; width: 220px;">
+        
+              
+    </div>
+    
+    <div class="grayVerticalLine"></div>
+
+
+<!-- Right column -->
+<div style="float: left; width: 210px;">
+    
+   
+              
+</div>
+   
+    
+
+
+

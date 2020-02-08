@@ -1,0 +1,590 @@
+
+
+    <!-- headline text -->
+    <div class="font12 bold mb-2" style="width: 100%;">
+        
+
+
+
+
+                                              
+                   <span id="showmapLabel">
+                    <a href="javascript:showMapP( 12.56969061, 55.66957769)">
+                        Vis kort
+                    </a>
+                </span>
+                    
+
+                          <div id='mapObjektP' style='width: 100%; height: 300px;display: none;'></div>
+
+
+    <div style="padding-top: 20px;z-index:100">
+        <ol class="progtrckr"> <li class="progtrckr-done" title="PLANLÆGNING"></li> <li class="progtrckr-done" title="RÅDGIVNING"></li> <li class="progtrckr-done" title="INDBUDTE TEAMS"></li> <li class="progtrckr-done" title="PROJEKTERING"></li> <li class="progtrckr-todo" title="LICITATION/UDBUD"></li> <li class="progtrckr-todo" title="INDBUDTE ENTREPRENØRER"></li> <li class="progtrckr-todo" title="LICITATION AFHOLDT"></li> <li class="progtrckr-todo" title="BYGGEPLADS ETABLERET"></li> <li class="progtrckr-todo" title="BYGGEARBEJDET AFSLUTTES"></li> <li class="progtrckr-todo" title="ANNULLEREDE PROJEKTER"></li> <li class="progtrckr-todo" title="INDKØB/RENGØRING"></li></ol>
+    </div>
+              
+    <div style="float: right; margin-right: 20px;" id="projectCardIconPanel">
+        
+    </div>
+
+   
+
+
+    <span class="ml-3">
+      Opførelse af boliger, hotel og kontor
+    </span>
+
+    </div>
+    
+    <!-- headline border -->
+    <!--div style="border: none; border-bottom: 1px solid black; padding:0; margin: 0 0 10px 0; font-size: 1px;" /></div-->
+
+<style>
+    .card-body label {
+        color: grey;
+        border-bottom: 2px solid #ccc;
+    }
+
+    .role-project-grey > div > p {
+        color: grey;
+        margin: 0px;
+    }
+
+    .role-project-grey > div > span {
+        color: grey;
+    }
+
+    .role-project-grey {
+        margin-bottom: 10px;
+    }
+
+    .card-group > .card {
+        /*padding: 1em;*/
+    }
+      
+    
+    
+    @media (max-width: 1200px) {
+        .Lpadding {
+            padding-left: 0px;
+        }
+
+    }
+
+    @media (min-width: 1200px) {
+        .Lpadding {
+            padding-left: 15px;
+        }
+
+    }
+
+    .marker {
+        background-image: url("/images/map-marker.png");
+        background-size: cover;
+        width: 40px;
+        height: 40px;
+        /*border-radius: 50%;*/
+        cursor: pointer;
+    }
+
+    .mapboxgl-popup {
+        max-width: 300px;
+    }
+
+    .mapboxgl-popup-content {
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+    }
+
+</style>
+
+
+    <div id="project_content1" >
+        
+
+    <style>
+        .card-body label {
+            color: grey;
+            border-bottom: 2px solid #ccc;
+        }
+
+        .role-project-grey > div > p {
+            color: grey;
+            margin: 0px;
+        }
+
+        .role-project-grey > div > span {
+            color: grey;
+        }
+
+        .role-project-grey {
+            margin-bottom: 10px;
+        }
+
+        .Lpadding {
+            padding-left: 10px;
+        }
+
+    </style>
+
+
+           
+
+
+   
+
+    <div class="row" style="margin: 0;">
+        <div class="col-lg-4 col-xl-3 object-card-column">
+ 
+                <div class="object-card-separator"></div>
+                <div>
+                <table border="0" class="font8" cellpadding="1" cellspacing="0">
+
+                    
+                    <tr>
+                        <td style="width: 10px">&nbsp;</td>
+                        <td class="font9 object-card-label " valign="top" colspan="2">
+                            Projektnavn:&nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 10px">&nbsp;</td>
+                        <td class="normal" colspan="2">
+                            Postbyen - 2. etape
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td colspan="3" style="height: 8px;"></td>
+                    </tr>
+                    <tr>
+                        <td style="width: 10px">&nbsp;</td>
+                        <td class="font9 object-card-label" valign="top" colspan="2">
+                            Byggeplads adresse:&nbsp;
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="width: 10px; vertical-align: top;">
+                            
+                        </td>
+                        <td class="normal" colspan="2">
+                            Bernstorffsgade 38<br />
+                            København V<br />
+                            1577 KØBENHAVN V
+
+
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td colspan="3" style="height: 8px;"></td>
+                    </tr>
+                    <tr>
+                        <td style="width: 10px">&nbsp;</td>
+                        <td class="object-card-label">
+                            Region:&nbsp;
+                        </td>
+                        <td class="normal">
+                            Hovedstaden
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 10px">
+                            
+
+                        </td>
+                        <td class="object-card-label">
+
+                            Kommune:&nbsp;
+                        </td>
+                        <td class="normal">
+                            København
+
+                        </td>
+                    </tr>
+
+                    
+                    <tr>
+                        <td colspan="3" style="height: 8px;"></td>
+                    </tr>
+                    <tr>
+                  <td style="width: 10px"></td>
+                        <td class="object-card-label" valign="top" >
+                            Ejendommens navn:&nbsp;
+                        </td>
+                    
+                        <td class="normal">
+                            Tietgensgade
+                        </td>
+                    </tr>
+                    
+                </table>
+            </div>
+
+
+            <div class="object-card-separator"></div>
+                    <div>
+                <table border="0" class="font8" cellpadding="1" cellspacing="0">
+                    <tr>
+                        <td style="width: 10px">
+                        </td>
+                        <td class="object-card-label">
+                            Budget(Mil.):&nbsp;
+                        </td>
+                        <td class="normal">
+                            2000 mio.kr
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 10px">
+                        </td>
+                        <td class="object-card-label">
+
+                            Byggestart:&nbsp;
+                        </td>
+                        <td class="normal">
+
+                            Oktober 2020
+                    
+
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td style="width: 10px">&nbsp;</td>
+                        <td class="object-card-label">
+                            Byggeslut:&nbsp;
+                        </td>
+                        <td class="normal">
+                            September 2024
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td style="width: 10px">&nbsp;</td>
+                        <td class="object-card-label">
+                            Byggeperiode:&nbsp;
+                        </td>
+                        <td class="normal">
+                            48 Måneder
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td style="width: 10px">&nbsp;</td>
+                        <td class="object-card-label">
+                            Entrepriseform:&nbsp;
+                        </td>
+                        <td class="normal">
+                            Totalentreprise
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td style="width: 10px">&nbsp;</td>
+                        <td class="object-card-label">
+                            Udbudsform:&nbsp;
+                        </td>
+                        <td class="normal">
+                            Ikke afklaret
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td style="width: 10px">
+                            
+                        </td>
+                        <td class="object-card-label">
+                            Projektstadie:&nbsp;
+                        </td>
+                        <td class="normal">
+                            Detailprojektering
+
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td style="width: 10px">
+                        </td>
+                        <td class="object-card-label">
+                            M2:&nbsp;
+                        </td>
+                        <td class="normal">
+                            92000
+
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td style="width: 10px">&nbsp;</td>
+                        <td class="object-card-label">
+                            Lejligheder:&nbsp;
+                        </td>
+                        <td class="normal">
+                            398
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td style="width: 10px">&nbsp;</td>
+                        <td class="object-card-label">
+                            Kælderetager:&nbsp;
+                        </td>
+                        <td class="normal">
+                            2
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td style="width: 10px">&nbsp;</td>
+                        <td class="object-card-label">
+                            Etager:&nbsp;
+                        </td>
+                        <td class="normal">
+                            25
+                        </td>
+                    </tr>
+                    
+                </table>
+            </div>
+                    <div class="object-card-separator"></div>
+                    <div>
+                <table border="0" class="font8" cellpadding="1" cellspacing="0">
+                    <tr>
+                        <td style="width: 10px">&nbsp;</td>
+                        <td class="font10 object-card-label" colspan="2">
+                            Kategorier
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 10px">
+                        </td>
+                        <td class="normal" colspan="2">
+
+                            <table class="font8"  border="0" cellspacing="0" cellpadding="0"><tr><td class="normal" valign="top">Boligblokke/lejligheder - Nybygning </td></tr><tr><td class="normal" valign="top">Hotel/motel - Nybygning </td></tr><tr><td class="normal" valign="top">Parkeringshus/Kælder - Nybygning </td></tr><tr><td class="normal" valign="top">Kontorbygning - Nybygning </td></tr><tr><td class="normal" valign="top">Forretning - Nybygning </td></tr><tr><td class="normal" valign="top">Sundheds-/lægehus - Nybygning </td></tr><tr><td class="normal" valign="top">Cafeteria/Cafe - Nybygning </td></tr><tr><td class="normal" valign="top">Storkøkken - Nybygning </td></tr><tr><td class="normal" valign="top">Kantine - Nybygning </td></tr><tr><td class="normal" valign="top">Flise/brolægning - Anlægsarbejde </td></tr><tr><td class="normal" valign="top">Byrum/friareal/torv - Anlægsarbejde </td></tr></table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+                    <div class="object-card-separator"></div>
+                    <div>
+                <table border="0" class="font8" cellpadding="1" cellspacing="0">
+
+                    
+                    <tr>
+                        <td style="width: 10px">&nbsp;
+                        </td>
+                        <td colspan="2">
+                            <span class="font9 object-card-label greenText" title="Bæredygtigt byggeri">Bæredygtigt byggeri</span>
+                        </td>
+                    </tr>
+
+                    
+                    <tr>
+                        <td colspan="3" style="height: 8px;"></td>
+                    </tr>
+                    
+
+                    <tr>
+                        <td style="width: 10px">&nbsp;</td>
+                        <td class="object-card-label">
+                            Projekt ID:&nbsp;
+                        </td>
+                        <td class="normal">
+                            1466407
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 10px">&nbsp;</td>
+                        <td class="object-card-label">
+                            Oprettet:&nbsp;
+                        </td>
+                        <td class="normal">
+                            19-09-2017
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 10px">&nbsp;</td>
+                        <td class="object-card-label">
+                            Opdateret:&nbsp;
+                        </td>
+                        <td class="normal">
+                            03-02-2020
+                        </td>
+                    </tr>
+                </table>
+            </div>
+                    <div class="object-card-separator"></div>
+                    <div>
+                <table border="0" class="font8" cellpadding="1" cellspacing="0">
+                    <tr>
+                        <td style="width: 10px">&nbsp;</td>
+                        <td class="font10 object-card-label" colspan="2">
+                            Ansvarlig undersøger
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 10px">&nbsp;</td>
+                        <td class="normal" colspan="2">
+                            Rasmus Schulian
+                            <br />
+                            <a class="petrolText" href="mailto:rs@byggefakta.dk?subject=Project id: 1466407">
+                                rs@byggefakta.dk</a><br />
+                            Telefon: 35250515
+                        </td>
+                    </tr>
+                    <tr>
+
+                        <td style="width: 10px">&nbsp;</td>
+                        <td valign="top" colspan="2">
+                            <a class="medium"
+                                href="javascript:LoadFeedbackPanelForm('project')">
+                                Ændringer/ tillæg</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+
+        <div class="col-lg-4 col-xl-6">
+            <div class="row">
+
+                <div class="col-lg-12 col-xl-6 object-card-column">
+                    <div>
+                        <div class="object-card-separator"></div>
+                        <div>
+                            <table border="0" class="font8" cellpadding="1" cellspacing="0">
+                                <tr>
+                                    <td style="width: 10px; vertical-align: top;">
+                                        
+                                    </td>
+                                    <td class="font10 object-card-label" colspan="2">
+                                        Projekt notater
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 10px">&nbsp;</td>
+                                    <td class="normal" colspan="2">
+                                        <BR /> <br>3/2-2020 Sagen er opdateret med materialer.  Danica udvikler nyt byområde ved navn Postbyen på Københavns Postterminals arealer tæt ved Københavns Hovedbanegård. Denne sag omhandler 2. etape.   Projektet omfatter opførelse af 4 runde tårnbygninger på en hævet plint mod banegraven: To tårne med et samlet areal på ca. 16.000 m2 indrettes med 162 boliger, mens yderligere to tårne på ca. 14.000 m2 indrettes med 236 hotel lejligheder på et og to værelser. Tårnene certificeres til DGNB-Sølv og LEED. Ligeledes opføres en ny erhvervsbebyggelse ved Carsten Niebuhrs Gade med et samlet areal på ca. 30.000 m2. Bygningen går indtil videre under navnet multihuset. Bygningen certificeres til DGNB-Guld. Derudover etableres ca. 30.000 m2 kælder/plint til parkering mv.   Nordkranen yder rådgivning i forbindelse med projektudvikling. Lundgaard & Tranberg har udarbejdet projektforslag i samarbejde med GEHL Architects, landskabsarkitekt Julie Kierkegaard og Per Aarsleff. Byggearbejdet udføres som totalentreprise af KPC i samarbejde med Arkitema og ÅF.  Henvisning til Sagsfiler:  "Postbyen - Danske Bank" <br>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                            
+                    </div>
+                </div>
+
+                <div class="col-lg-12 col-xl-6  object-card-column">
+                    <div>
+                        <div class="object-card-separator"></div><div class="Lpadding"><span class="font10 object-card-label">Roller (Målgrupper)</span><br /><br /> <span class="font9 object-card-label">Bygherre:</span><br /><br><i>Tilføjet:</i>&nbsp;21-10-2019<br /><div onclick="javascript:LoadCompany(904931)" style="cursor:pointer;"><span class="petrolText underlinetext font9 bold">Danica Ejendomsselskab ApS </span><br />Parallelvej 17<br />Holmens Kanal 2<br />2800&nbsp;Kgs. Lyngby<br />Telefon: 70112525<br />Fax: 39679820<br /><br /></div><i>Kontakt:</i>&nbsp;<a href="javascript:LoadContact(1403614)"><span class="petrolText bold "><u>Robert&nbsp;Nellemann</u></span></a><br /><a class="petrolText font8" style="line-height: 12pt; "  href="mailto:rnel@danicapension.dk?subject=Angående : Opførelse af boliger, hotel og kontor ,Postbyen - 2. etape" >rnel@danicapension.dk</a><br /><br /> <span class="font9 object-card-label">Bygherrerådgiver:</span><br /><br><i>Tilføjet:</i>&nbsp;07-03-2018<br /><div onclick="javascript:LoadCompany(444177)" style="cursor:pointer;"><span class="petrolText underlinetext font9 bold">Nordkranen A/S Ejendomsudviklingsselskab </span><br />Arne Jacobsens Allé 7<br />2300&nbsp;KØBENHAVN S<br />Telefon: 44522020<br />Fax: 44522021<br /><br /></div><i>Projektleder:</i>&nbsp;<a href="javascript:LoadContact(6001103)"><span class="petrolText bold "><u>Heini&nbsp;Vogn</u></span></a><br /><br /> <span class="font9 object-card-label">Lejer:</span><br />Hoteloperatør<br><i>Tilføjet:</i>&nbsp;08-01-2020<br /><div onclick="javascript:LoadCompany(6029343)" style="cursor:pointer;"><span class="petrolText underlinetext font9 bold">Edyn </span><br />Great Marlborough Street 58<br />W1F 7JY&nbsp;London<br />Telefon: +44 330 1233480<br /><br /></div><br /> <span class="font9 object-card-label">Totalentreprenør:</span><br /><br><i>Tilføjet:</i>&nbsp;24-09-2019<br /><div onclick="javascript:LoadCompany(331790)" style="cursor:pointer;"><span class="petrolText underlinetext font9 bold">KPC København A/S </span><br />Borupvang 2B 1<br />2750&nbsp;Ballerup<br />Telefon: 70123530<br />Fax: 70123531<br /><br /></div><i>Kontakt:</i>&nbsp;<a href="javascript:LoadContact(710038)"><span class="petrolText bold "><u>Jesper&nbsp;Henkel</u></span></a><br /><a class="petrolText font8" style="line-height: 12pt; "  href="mailto:jhe@kpc.dk?subject=Angående : Opførelse af boliger, hotel og kontor ,Postbyen - 2. etape" >jhe@kpc.dk</a><br /><br /> <span class="font9 object-card-label">Skitseprojekt:</span><br /><br><i>Tilføjet:</i>&nbsp;19-09-2017<br /><div onclick="javascript:LoadCompany(598989)" style="cursor:pointer;"><span class="petrolText underlinetext font9 bold">GEHL Architects ApS </span><br />Vesterbrogade 24 5<br />Gl. Kongevej 1 c/o 4 tv<br />1620&nbsp;KØBENHAVN V<br />Telefon: 32950951<br />Fax: 32950958<br /><br /></div><br /> <span class="font9 object-card-label">Skitseprojekt:</span><br /><br><i>Tilføjet:</i>&nbsp;19-09-2017<br /><div onclick="javascript:LoadCompany(510090)" style="cursor:pointer;"><span class="petrolText underlinetext font9 bold">Julie Kierkegaard A/S </span><br />Rebekkavej 59<br />2900&nbsp;HELLERUP<br />Telefon: 39960500<br />Fax: 29960509<br /><br /></div><br /> <span class="font9 object-card-label">Skitseprojekt:</span><br /><br><i>Tilføjet:</i>&nbsp;19-09-2017<br /><div onclick="javascript:LoadCompany(250434)" style="cursor:pointer;"><span class="petrolText underlinetext font9 bold">Lundgaard & Tranberg Arkitekter A/S </span><br />Pilestræde 10 3<br />1112&nbsp;København K<br />Telefon: 33910717<br />Fax: 33910716<br /><br /></div><br /> <span class="font9 object-card-label">Skitseprojekt:</span><br /><br><i>Tilføjet:</i>&nbsp;30-05-2018<br /><div onclick="javascript:LoadCompany(6004872)" style="cursor:pointer;"><span class="petrolText underlinetext font9 bold">Per Aarsleff A/S </span><br />Industriholmen 2<br />2650&nbsp;Hvidovre<br />Telefon: 87442222<br />Fax: 36793300<br /><br /></div><br /> <span class="font9 object-card-label">Arkitekt:</span><br /><br><i>Tilføjet:</i>&nbsp;03-02-2020<br /><div onclick="javascript:LoadCompany(258808)" style="cursor:pointer;"><span class="petrolText underlinetext font9 bold">Arkitema K/S </span><br />Frederiksgade 32<br />8000&nbsp;AARHUS C<br />Telefon: 70117011<br />Fax: 86137011<br /><br /></div><i>Kontakt:</i>&nbsp;<a href="javascript:LoadContact(680372)"><span class="petrolText bold "><u>Jan Dickow&nbsp;Danielsen</u></span></a><br /><a class="petrolText font8" style="line-height: 12pt; "  href="mailto:jdd@arkitema.dk?subject=Angående : Opførelse af boliger, hotel og kontor ,Postbyen - 2. etape" >jdd@arkitema.dk</a><br /><br /> <span class="font9 object-card-label">Ingeniør:</span><br /><br><i>Tilføjet:</i>&nbsp;27-09-2019<br /><div onclick="javascript:LoadCompany(933166)" style="cursor:pointer;"><span class="petrolText underlinetext font9 bold">ÅF Buildings Denmark P/S </span><br />Viborgvej 1<br />7400&nbsp;Herning<br />Telefon: 97221133<br />Fax: 97221905<br /><br /></div></div><div class="object-card-separator"></div><div class="Lpadding"><span class="font10 object-card-label">Materiale</span><br /><br /><div class="font9 object-card-label">Altaner</div><div style="margin-left:5px; margin-bottom: 3px;">Altan-Tagterasse<br /><i></i></div><br /><div class="font9 object-card-label">Facader</div><div style="margin-left:5px; margin-bottom: 3px;">Facade-Tegl/mursten<br /><i></i></div><div style="margin-left:5px; margin-bottom: 3px;">Facade-Alu/Glas<br /><i></i></div><br /><div class="font9 object-card-label">Vinduer</div><div style="margin-left:5px; margin-bottom: 3px;">Vinduer-Aluminium/Træ<br /><i></i></div><br /><div class="font9 object-card-label">Indretning</div><div style="margin-left:5px; margin-bottom: 3px;">Indretning-Køkken<br /><i></i></div><br /><div class="font9 object-card-label">Gulv</div><div style="margin-left:5px; margin-bottom: 3px;">Gulv-Beton<br /><i></i></div><div style="margin-left:5px; margin-bottom: 3px;">Gulv-Linoleum<br /><i></i></div><div style="margin-left:5px; margin-bottom: 3px;">Gulv-Træ - parket<br /><i></i></div><div style="margin-left:5px; margin-bottom: 3px;">Gulv-Tæpper<br /><i></i></div><div style="margin-left:5px; margin-bottom: 3px;">Gulv-Klinker keramiske<br /><i></i></div><div style="margin-left:5px; margin-bottom: 3px;">Gulv-Vinyl<br /><i></i></div><br /><div class="font9 object-card-label">Elevator</div><div style="margin-left:5px; margin-bottom: 3px;">Automatik-Elevator<br /><i></i></div><br /><div class="font9 object-card-label">Skillevægge</div><div style="margin-left:5px; margin-bottom: 3px;">Skillevægge-Glas<br /><i></i></div><div style="margin-left:5px; margin-bottom: 3px;">Skillevægge-beton<br /><i></i></div><div style="margin-left:5px; margin-bottom: 3px;">Skillevægge-gips<br /><i></i></div><br /><div class="font9 object-card-label">Affaldsrum</div><div style="margin-left:5px; margin-bottom: 3px;">Affaldshåntering/Skraldesug<br /><i></i></div><br /><div class="font9 object-card-label">Råhus</div><div style="margin-left:5px; margin-bottom: 3px;">Råhus beton<br /><i></i></div><br /><div class="font9 object-card-label">Tagbelægning</div><div style="margin-left:5px; margin-bottom: 3px;">Tag-Pap<br /><i></i></div><div style="margin-left:5px; margin-bottom: 3px;">Tag-Grønne<br /><i></i></div><br /><div class="font9 object-card-label">Ventilation</div><div style="margin-left:5px; margin-bottom: 3px;">Ventilation-Mekanisk udsugning<br /><i></i></div><div style="margin-left:5px; margin-bottom: 3px;">CTS Ventilation<br /><i></i></div><br /><div class="font9 object-card-label">Varmesystem</div><div style="margin-left:5px; margin-bottom: 3px;">Varmekilde-Fjernvarme<br /><i></i></div><div style="margin-left:5px; margin-bottom: 3px;">Varme-Gulvvarme, vand<br /><i></i></div><div style="margin-left:5px; margin-bottom: 3px;">Varme-Radiator, vand<br /><i></i></div><div style="margin-left:5px; margin-bottom: 3px;">CTS Varme<br /><i></i></div><div style="margin-left:5px; margin-bottom: 3px;">Varme-Genvindingsanlæg<br /><i></i></div><br /><div class="font9 object-card-label">Sanitetsudstyr</div><div style="margin-left:5px; margin-bottom: 3px;">Diverse-VVS arbejde<br /><i></i></div><br /><div class="font9 object-card-label">Loft</div><div style="margin-left:5px; margin-bottom: 3px;">Loft-Gips<br /><i></i></div><div style="margin-left:5px; margin-bottom: 3px;">Loft-Beton<br /><i></i></div><div style="margin-left:5px; margin-bottom: 3px;">Loft-Akustik<br /><i></i></div><br /><div class="font9 object-card-label">Storkøkken</div><div style="margin-left:5px; margin-bottom: 3px;">Diverse-Storkøkkener<br /><i></i></div><br /><div class="font9 object-card-label">Sikkerhedssystem</div><div style="margin-left:5px; margin-bottom: 3px;">Diverse-Alarmsystem<br /><i></i></div><div style="margin-left:5px; margin-bottom: 3px;">Diverse-Brandsikring<br /><i></i></div><br /><div class="font9 object-card-label">Faldstamme</div><div style="margin-left:5px; margin-bottom: 3px;">Diverse-Faldstamme/Stigstrenge<br /><i></i></div><br /><div class="font9 object-card-label">El o. tele</div><div style="margin-left:5px; margin-bottom: 3px;">Solceller<br /><i></i></div><div style="margin-left:5px; margin-bottom: 3px;">Diverse El/Installationer<br /><i></i></div></div>
+                    </div>
+                
+
+
+            </div>
+
+        </div>
+               </div>
+
+        <div class="col-lg-4 col-xl-3 object-card-column">
+            <div>
+                <div class="Lpadding">
+                    
+                </div>
+
+                          
+
+                <div class="object-card-separator"></div>
+                <div class="Lpadding">
+                    
+                    <!-- salestatus panel -->
+                    <div style="margin-top: 10px; float: left;" class="font10" id="quickMenuOptionPanelModalButtonProjectSaleStatus" data-toggle="modal" data-target="#quickMenuOptionPanelModalProjectSaleStatus">
+
+                     <img src="images/2013/16/salesstatus.png" style="vertical-align: middle;" />&nbsp;&nbsp;<a title="Status" href="javascript:LoadToolBarProjectSaleStatusGuideMenu();" class="font10 object-card-label">Status</a>
+                    </div>
+
+                    <div style="position: relative; height: 7px; width: 100px; clear: both; font-size: 1px;"></div>
+
+                    <div id="ProjectSaleStatusPanel" class="font8">
+                        <br />
+                        <br />
+                        <br />
+                        <div class="centertext">
+                            <img src="../images/ajax-loader.gif" />
+                        </div>
+                    </div>
+                </div>
+     
+
+
+
+
+                
+                <!-- User notes panel for this object -->
+                <div class="object-card-separator"></div>
+                <div class="Lpadding">
+                      
+                    <div id="addUserNotePanelModalButton" style="margin-top: 10px; float: left;" class="font10" data-toggle="modal" data-target="#addUserNotePanelModal">
+                        <img src="../images/blank.gif" class="img16x16 imgNotepad16" style="vertical-align: middle;" />&nbsp;&nbsp;<a title="Indsæt en note" href="javascript:ShowUserNotePanel()" class="font10 object-card-label">Notater</a>
+                    </div>
+
+                    <div style="position: relative; height: 7px; width: 100px; clear: both; font-size: 1px;"></div>
+
+                    <div id="project_UserNotesPanel" class="font8">
+                        <br />
+                        <br />
+                        <br />
+                        <div class="centertext">
+                            <img src="../images/ajax-loader.gif" />
+                        </div>
+                    </div>
+                </div>
+
+                
+
+            
+              <div style="position: relative; height: 7px; width: 100px; clear: both; font-size: 1px;"></div>
+
+              </div>
+              </div>
+    
+
+              </div>
+
+              
+    </div>
+
+
+    <!-- Left column -->
+    <div id="project_leftColumn" style="float: left; width: 215px;">
+        
+              
+    </div>
+    
+    <div class="grayVerticalLine"></div>
+
+
+    <!-- Center column -->
+    <div id="project_centerColumn" class="font8" style="float: left; width: 220px;">
+        
+              
+    </div>
+    
+    <div class="grayVerticalLine"></div>
+
+
+<!-- Right column -->
+<div style="float: left; width: 210px;">
+    
+   
+              
+</div>
+   
+    
+
+
+
