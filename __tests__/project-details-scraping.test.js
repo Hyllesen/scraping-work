@@ -15,12 +15,14 @@ describe("projectDetailScraper", () => {
         projectName: "Postbyen - 2. etape"
       },
       {
+        role: "Totalentreprenør",
         name: "Jesper Henkel",
         email: "jhe@kpc.dk",
         company: "KPC København A/S",
         projectName: "Postbyen - 2. etape"
       },
       {
+        role: "Arkitekt",
         name: "Jan Dickow Danielsen",
         company: "Arkitema A/S",
         email: "jdd@arkitema.dk",
